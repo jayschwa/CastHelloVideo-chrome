@@ -114,6 +114,7 @@ function sessionUpdateListener(isAlive) {
  * receiver listener during initialization
  */
 function receiverListener(e) {
+  console.log(e);
   if( e === 'available' ) {
     console.log("receiver found");
     appendMessage("receiver found");
