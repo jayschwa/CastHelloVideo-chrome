@@ -7,24 +7,15 @@ var progressFlag = 1;
 var mediaCurrentTime = 0;
 var session = null;
 var mediaURLs = [
-           'http://commondatastorage.googleapis.com/gtv-videos-bucket/big_buck_bunny_1080p.mp4',
-           'http://commondatastorage.googleapis.com/gtv-videos-bucket/ED_1280.mp4',
-           'http://commondatastorage.googleapis.com/gtv-videos-bucket/tears_of_steel_1080p.mov',
-           'http://commondatastorage.googleapis.com/gtv-videos-bucket/reel_2012_1280x720.mp4',
-           'http://commondatastorage.googleapis.com/gtv-videos-bucket/Google%20IO%202011%2045%20Min%20Walk%20Out.mp3'];
+           'http://commondatastorage.googleapis.com/gtv-videos-bucket/Google%20IO%202011%2045%20Min%20Walk%20Out.mp3',
+           'http://uwstream1.somafm.com:80/;'];
 var mediaTitles = [
-           'Big Buck Bunny',
-           'Elephant Dream',
-           'Tears of Steel',
-           'Reel 2012',
-           'Google I/O 2011 Audio'];
+           'Google I/O 2011 Audio',
+           'Groove Salad'];
 
 var mediaThumbs = [
-           'images/bunny.jpg',
-           'images/ed.jpg',
-           'images/Tears.jpg',
-           'images/reel.jpg',
-           'images/google-io-2011.jpg'];
+           'images/google-io-2011.jpg',
+           'http://somafm.com/img/groovesalad120.png'];
 var currentMediaURL = mediaURLs[0];
 
 
@@ -185,7 +176,7 @@ function loadMedia(i) {
   console.log("loading..." + currentMediaURL);
   appendMessage("loading..." + currentMediaURL);
   var mediaInfo = new chrome.cast.media.MediaInfo(currentMediaURL);
-  mediaInfo.contentType = 'video/mp4';
+  mediaInfo.contentType = 'audio/mp3';
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
   request.currentTime = 0;
