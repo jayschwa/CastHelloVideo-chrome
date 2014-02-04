@@ -1,9 +1,13 @@
 .background {
-  background: left top no-repeat url('http://somafm.com/img/FPLoneDJ10.jpg');
+  background-color: black;
+  background-image: url('http://somafm.com/img/FPLoneDJ10.jpg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .logo {
-  background-image: no-repeat url('http://somafm.com/img/LogoFP2010.gif');
+  background-image: url('http://somafm.com/img/LogoFP2010.gif');
 }
 
 .progressBar {
