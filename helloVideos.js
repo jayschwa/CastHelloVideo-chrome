@@ -178,6 +178,11 @@ function loadMedia(i) {
   var mediaInfo = new chrome.cast.media.MediaInfo(currentMediaURL);
   //mediaInfo.streamType = 'BUFFERED';
   mediaInfo.contentType = 'audio/mp3';
+  mediaInfo.metadata = {
+    'metadataType' : 0,
+    'title:' : mediaTitles[i]
+ //   "images" : [{ "url"  : mediaThumbs[i] }]
+  };
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
   request.currentTime = 0;
