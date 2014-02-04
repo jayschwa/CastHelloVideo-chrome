@@ -163,6 +163,8 @@ function stopApp() {
   session.stop(onStopAppSuccess, onError);
 }
 
+var gDuration = Number.MAX_VALUE;
+
 /**
  * load media
  * @param {string} i An index for media
@@ -177,7 +179,8 @@ function loadMedia(i) {
   console.log("loading..." + mediaURLs[i]);
   appendMessage("loading..." + mediaURLs[i]);
   var mediaInfo = new chrome.cast.media.MediaInfo(mediaURLs[i]);
-  mediaInfo.duration = 0.0;
+  mediaInfo.duration = gDuration;
+  console.log(mediaInfo.duration);
   mediaInfo.streamType = 'live';
   mediaInfo.contentType = 'audio/mp3';
   mediaInfo.metadata = {
