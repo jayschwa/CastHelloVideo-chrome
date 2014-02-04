@@ -184,6 +184,8 @@ function loadMedia(i) {
     'subtitle' : 'A nicely chilled plate of ambient/downtempo beats and grooves.',
     "images" : [{ "url" : mediaThumbs[i] }]
   };
+  console.log(i);
+  console.log(mediaTitles[i]+", "+mediaThumbs[i]);
   console.log(mediaInfo);
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
