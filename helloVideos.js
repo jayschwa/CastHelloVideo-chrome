@@ -7,14 +7,14 @@ var progressFlag = 1;
 var mediaCurrentTime = 0;
 var session = null;
 var mediaURLs = [
-           'http://commondatastorage.googleapis.com/gtv-videos-bucket/Google%20IO%202011%2045%20Min%20Walk%20Out.mp3',
+           'http://uwstream2.somafm.com:8100/;',
            'http://uwstream1.somafm.com:80/;'];
 var mediaTitles = [
-           'Google I/O 2011 Audio',
+           'Drone Zone',
            'Groove Salad'];
 
 var mediaThumbs = [
-           'images/google-io-2011.jpg',
+           'http://somafm.com/img/dronezone120.jpg',
            'http://somafm.com/img/groovesalad120.png'];
 var currentMedia = 0;
 
