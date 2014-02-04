@@ -181,7 +181,7 @@ function loadMedia(i) {
   mediaInfo.metadata = {
     'metadataType' : 0,
     'title:' : mediaTitles[i],
-    'subtitle' : 'This is sweeeeet': 
+    'subtitle' : 'This is sweeeeet' 
  //   "images" : [{ "url"  : mediaThumbs[i] }]
   };
   console.log(mediaInfo);
