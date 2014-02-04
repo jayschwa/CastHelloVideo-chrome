@@ -176,7 +176,7 @@ function loadMedia(i) {
   console.log("loading..." + currentMediaURL);
   appendMessage("loading..." + currentMediaURL);
   var mediaInfo = new chrome.cast.media.MediaInfo(currentMediaURL);
-  mediaInfo.streamType = 'BUFFERED';
+  //mediaInfo.streamType = 'BUFFERED';
   mediaInfo.contentType = 'audio/mp3';
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
