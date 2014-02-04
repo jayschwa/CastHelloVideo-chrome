@@ -177,7 +177,7 @@ function loadMedia(i) {
   console.log("loading..." + mediaURLs[i]);
   appendMessage("loading..." + mediaURLs[i]);
   var mediaInfo = new chrome.cast.media.MediaInfo(mediaURLs[i]);
-  mediaInfo.streamType = 'none';
+  mediaInfo.streamType = 'live';
   mediaInfo.contentType = 'audio/mp3';
   mediaInfo.metadata = {
     'metadataType' : 0,
