@@ -163,8 +163,6 @@ function stopApp() {
   session.stop(onStopAppSuccess, onError);
 }
 
-var gDuration = Number.MAX_VALUE;
-
 /**
  * load media
  * @param {string} i An index for media
@@ -179,10 +177,8 @@ function loadMedia(i) {
   console.log("loading..." + mediaURLs[i]);
   appendMessage("loading..." + mediaURLs[i]);
   var mediaInfo = new chrome.cast.media.MediaInfo(mediaURLs[i]);
-  mediaInfo.duration = gDuration;
-  console.log(mediaInfo.duration);
   mediaInfo.streamType = 'live';
-  mediaInfo.contentType = 'audio/mp3';
+  mediaInfo.contentType = 'audio/mpeg';
   mediaInfo.metadata = {
     'metadataType' : 0,
     'title' : mediaTitles[i],
@@ -191,8 +187,7 @@ function loadMedia(i) {
   };
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
-  request.currentTime = 0;
-
+  console.log(request);
   session.loadMedia(request,
     onMediaDiscovered.bind(this, 'loadMedia'),
     onMediaError);
