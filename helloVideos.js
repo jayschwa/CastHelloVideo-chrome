@@ -176,21 +176,16 @@ function loadMedia(i) {
   console.log("loading..." + currentMediaURL);
   appendMessage("loading..." + currentMediaURL);
   var mediaInfo = new chrome.cast.media.MediaInfo(currentMediaURL);
+  mediaInfo.streamType = "LIVE"
   mediaInfo.contentType = 'audio/mp3';
+  mediaInfo.metadata = {
+    "metadataType" : 0,
+    "title:" : mediaTitles[i],
+    "images" : [{ "url"  : mediaThumbs[i] }]
+  };
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
   request.currentTime = 0;
-  
-  var payload = {
-    "title:" : mediaTitles[i],
-    "thumb" : mediaThumbs[i]
-  };
-
-  var json = {
-    "payload" : payload
-  };
-
-  request.customData = json;
 
   session.loadMedia(request,
     onMediaDiscovered.bind(this, 'loadMedia'),
