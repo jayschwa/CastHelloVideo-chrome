@@ -177,7 +177,7 @@ function loadMedia(i) {
   console.log("loading..." + mediaURLs[i]);
   appendMessage("loading..." + mediaURLs[i]);
   var mediaInfo = new chrome.cast.media.MediaInfo(mediaURLs[i]);
-  mediaInfo.streamType = 'buffered';
+  mediaInfo.streamType = 'none';
   mediaInfo.contentType = 'audio/mp3';
   mediaInfo.metadata = {
     'metadataType' : 0,
@@ -185,9 +185,6 @@ function loadMedia(i) {
     'subtitle' : 'SomaFM',
     "images" : [{ "url" : mediaThumbs[i] }]
   };
-  console.log(i);
-  console.log(mediaTitles[i]+", "+mediaThumbs[i]);
-  console.log(mediaInfo);
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
   request.currentTime = 0;
