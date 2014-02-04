@@ -177,12 +177,12 @@ function loadMedia(i) {
   console.log("loading..." + mediaURLs[i]);
   appendMessage("loading..." + mediaURLs[i]);
   var mediaInfo = new chrome.cast.media.MediaInfo(mediaURLs[i]);
-  //mediaInfo.streamType = 'BUFFERED';
+  mediaInfo.streamType = 'buffered';
   mediaInfo.contentType = 'audio/mp3';
   mediaInfo.metadata = {
     'metadataType' : 0,
     'title' : mediaTitles[i],
-    'subtitle' : 'A nicely chilled plate of ambient/downtempo beats and grooves.',
+    'subtitle' : 'SomaFM',
     "images" : [{ "url" : mediaThumbs[i] }]
   };
   console.log(i);
