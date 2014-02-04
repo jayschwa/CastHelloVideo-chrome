@@ -180,9 +180,11 @@ function loadMedia(i) {
   mediaInfo.contentType = 'audio/mp3';
   mediaInfo.metadata = {
     'metadataType' : 0,
-    'title:' : mediaTitles[i]
+    'title:' : mediaTitles[i],
+    'subtitle' : 'This is sweeeeet': 
  //   "images" : [{ "url"  : mediaThumbs[i] }]
   };
+  console.log(mediaInfo);
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
   request.currentTime = 0;
