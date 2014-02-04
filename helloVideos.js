@@ -16,7 +16,7 @@ var mediaTitles = [
 var mediaThumbs = [
            'images/google-io-2011.jpg',
            'http://somafm.com/img/groovesalad120.png'];
-var currentMediaURL = mediaURLs[0];
+var currentMedia = 0;
 
 
 /**
@@ -123,7 +123,7 @@ function receiverListener(e) {
 function selectMedia(m) {
   console.log("media selected" + m);
   appendMessage("media selected" + m);
-  currentMediaURL = mediaURLs[m]; 
+  currentMedia = m;
   var playpauseresume = document.getElementById("playpauseresume");
   document.getElementById('thumb').src = mediaThumbs[m];
 }
@@ -173,9 +173,10 @@ function loadMedia(i) {
     appendMessage("no session");
     return;
   }
-  console.log("loading..." + currentMediaURL);
-  appendMessage("loading..." + currentMediaURL);
-  var mediaInfo = new chrome.cast.media.MediaInfo(currentMediaURL);
+  i = currentMedia; // UGLY HACK
+  console.log("loading..." + mediaURLs[i]);
+  appendMessage("loading..." + mediaURLs[i]);
+  var mediaInfo = new chrome.cast.media.MediaInfo(mediaURLs[i]);
   //mediaInfo.streamType = 'BUFFERED';
   mediaInfo.contentType = 'audio/mp3';
   mediaInfo.metadata = {
