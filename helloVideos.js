@@ -7,8 +7,8 @@ var progressFlag = 1;
 var mediaCurrentTime = 0;
 var session = null;
 var mediaURLs = [
-           'http://uwstream2.somafm.com:8100/;',
-           'http://uwstream2.somafm.com:3000/;'];
+           'http://ice.somafm.com/dronezone',
+           'http://ice.somafm.com/groovesalad'];
 var mediaTitles = [
            'Drone Zone',
            'Groove Salad'];
@@ -182,7 +182,7 @@ function loadMedia(i) {
   mediaInfo.duration = gDuration;
   console.log(mediaInfo.duration);
   mediaInfo.streamType = 'live';
-  mediaInfo.contentType = 'audio/aac';
+  mediaInfo.contentType = 'audio/mp3';
   mediaInfo.metadata = {
     'metadataType' : 0,
     'title' : mediaTitles[i],
