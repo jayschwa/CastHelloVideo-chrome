@@ -8,14 +8,17 @@ var mediaCurrentTime = 0;
 var session = null;
 var mediaURLs = [
            'http://ice.somafm.com/dronezone',
-           'http://ice.somafm.com/groovesalad'];
+           'http://ice.somafm.com/groovesalad'
+           'http://ice.somafm.com/thetrip'];
 var mediaTitles = [
            'Drone Zone',
-           'Groove Salad'];
+           'Groove Salad',
+           'The Trip'];
 
 var mediaThumbs = [
            'http://somafm.com/img/dronezone120.jpg',
-           'http://somafm.com/img/groovesalad120.png'];
+           'http://somafm.com/img/groovesalad120.png',
+           'http://somafm.com/img/thetrip120.jpg'];
 var currentMedia = 0;
 
 
@@ -183,14 +186,7 @@ function loadMedia(i) {
     'metadataType' : 0,
     'title' : mediaTitles[i],
     'subtitle' : 'SomaFM',
-    "images" : [{
-           "url" : mediaThumbs[i],
-           "width" : 120,
-           "height" : 120 },
-           { "url": "http://somafm.com/img/lush-x120.jpg" },
-           { "url": "http://somafm.com/img/earwaves120.jpg"},
-           { "url": "http://somafm.com/img/deepspaceone120.gif"},
-           { "url": "http://somafm.com/img/dronezone120.jpg"}]
+    "images" : [{ "url" : mediaThumbs[i] }]
   };
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
