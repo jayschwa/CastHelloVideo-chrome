@@ -8,7 +8,7 @@ var mediaCurrentTime = 0;
 var session = null;
 var mediaURLs = [
            'http://ice.somafm.com/dronezone',
-           'http://ice.somafm.com/groovesalad'
+           'http://ice.somafm.com/groovesalad',
            'http://ice.somafm.com/thetrip'];
 var mediaTitles = [
            'Drone Zone',
