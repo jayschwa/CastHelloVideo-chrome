@@ -186,7 +186,11 @@ function loadMedia(i) {
     "images" : [{
            "url" : mediaThumbs[i],
            "width" : 120,
-           "height" : 120 }]
+           "height" : 120 },
+           { "url": "http://somafm.com/img/lush-x120.jpg" },
+           { "url": "http://somafm.com/img/earwaves120.jpg"},
+           { "url": "http://somafm.com/img/deepspaceone120.gif"},
+           { "url": "http://somafm.com/img/dronezone120.jpg"}]
   };
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
