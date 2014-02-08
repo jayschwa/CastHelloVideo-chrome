@@ -183,7 +183,10 @@ function loadMedia(i) {
     'metadataType' : 0,
     'title' : mediaTitles[i],
     'subtitle' : 'SomaFM',
-    "images" : [{ "url" : mediaThumbs[i] }]
+    "images" : [{
+           "url" : mediaThumbs[i],
+           "width" : 120,
+           "height" : 120 }]
   };
   var request = new chrome.cast.media.LoadRequest(mediaInfo);
   request.autoplay = true;
