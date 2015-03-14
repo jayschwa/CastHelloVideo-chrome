@@ -7,18 +7,20 @@ var progressFlag = 1;
 var mediaCurrentTime = 0;
 var session = null;
 var mediaURLs = [
+           'http://ice.somafm.com/beatblender',
            'http://ice.somafm.com/dronezone',
            'http://ice.somafm.com/groovesalad',
            'http://ice.somafm.com/thetrip'];
 var mediaTitles = [
+           'Beat Blender',
            'Drone Zone',
            'Groove Salad',
            'The Trip'];
-
 var mediaThumbs = [
-           'http://somafm.com/img/dronezone120.jpg',
-           'http://somafm.com/img/groovesalad120.png',
-           'http://somafm.com/img/thetrip120.jpg'];
+           'http://somafm.com/img3/beatblender-400.jpg',
+           'http://somafm.com/img3/dronezone-400.jpg',
+           'http://somafm.com/img3/groovesalad-400.jpg',
+           'http://somafm.com/img3/thetrip-400.jpg'];
 var currentMedia = 0;
 
 
